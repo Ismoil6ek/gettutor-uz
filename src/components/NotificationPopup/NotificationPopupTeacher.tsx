@@ -40,7 +40,7 @@ const NotificationPopupTeacher = () => {
           },
         },
         cluster: "ap2",
-        forseTLS: false,
+        forseTLS: true,
         wsHost: "api.gettutor.uz",
         wsPort: 6001,
         encrypted: false,

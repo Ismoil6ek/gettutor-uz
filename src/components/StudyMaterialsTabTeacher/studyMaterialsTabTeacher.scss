@@ -1,4 +1,4 @@
-@use "../../variables"as variables;
+@use "../../variables" as variables;
 
 .study-materials {
   .study-materials-content {
@@ -67,7 +67,7 @@
             background: white;
             padding: 0px 40px;
             border: 1px solid #0023b8;
-            transition: .2s ease all;
+            transition: 0.2s ease all;
 
             &::after {
               content: "Добавить";
@@ -201,9 +201,8 @@
             transition: 0.2s ease all;
             z-index: 7;
             height: 240px;
-            object-fit: cover;
             opacity: 1;
-            border-radius: 5px;
+            border-radius: 0.1px;
           }
 
           video::-webkit-media-controls-panel {
@@ -486,9 +485,7 @@
           .subscribe-tariff-btn {
             padding: 1rem;
             color: #fff;
-            background: linear-gradient(213.62deg,
-                #0023b8 -13.84%,
-                #566fd8 121.86%);
+            background: linear-gradient(213.62deg, #0023b8 -13.84%, #566fd8 121.86%);
             border-radius: 5px;
             font-weight: 500;
             font-size: 15px;
