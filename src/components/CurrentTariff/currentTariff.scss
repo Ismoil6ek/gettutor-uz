@@ -1,0 +1,115 @@
+@use "../../_variables" as variables;
+
+.current-tariff {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  .current-tariff-title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    font-family: gilroyBold;
+  }
+
+  .current-tariff-header {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #00059c;
+    border-radius: 10px;
+
+    .tariff-name-period-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .current-tariff-name {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 25px;
+        font-family: gilroyBold;
+
+        @media screen and (max-width: variables.$tablet) {
+          position: relative;
+          width: 100%;
+        }
+      }
+
+      .period {
+        @media screen and (max-width: variables.$tablet) {
+          display: none;
+        }
+
+        padding: 10px 15px;
+        background: #34c759;
+        border-radius: 100px;
+        color: #fff;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 18px;
+      }
+    }
+
+    .current-tariff-cost {
+      margin-top: 10px;
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 27px;
+
+      @media screen and (max-width: variables.$tablet) {
+        margin-top: 20px;
+      }
+    }
+
+    .period-mobile {
+      margin-top: 20px;
+    }
+
+    .renew-change-btn-wrapper {
+      margin-top: 30px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      .renew-tariff-btn {
+        padding: 15px 10px;
+        background: #051c78;
+        border-radius: 5px;
+        color: #fff;
+      }
+
+      .change-tariff-btn {
+        padding: 13px 10px;
+        border: 1px solid #007aff;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  .current-tariff-body {
+    margin-top: 30px;
+
+    .offers-title {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 24px;
+      font-family: gilroyBold;
+    }
+
+    .offers-list {
+      margin-top: 20px;
+
+      .offer-item {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        font-weight: 500;
+        font-size: 19px;
+        line-height: 22px;
+
+        .done-icon {
+          fill: #007aff;
+        }
+      }
+    }
+  }
+}

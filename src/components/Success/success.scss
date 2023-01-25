@@ -1,0 +1,23 @@
+.success {
+  width: 400px;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: #ffffff;
+  font-size: 25px;
+  color: lightgreen;
+  svg {
+    width: 140px;
+  }
+  button {
+    width: 341px;
+    height: 50px;
+    color: #fff;
+    background: linear-gradient(213.62deg, #0023b8 -13.84%, #566fd8 121.86%);
+    border-radius: 5px;
+  }
+}

@@ -1,0 +1,186 @@
+@use "../../variables"as variables;
+
+.pupil-profile-container {
+  @media screen and (max-width: variables.$laptop) {
+    background-color: #F6F6F6;
+  }
+
+  .pupil-profile {
+    padding: 0 205px;
+    max-width: 1440px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+
+
+
+    @media screen and (max-width: 1024px) {
+      padding: clamp(2.1875rem, 1.8574rem + 1.4085vw, 3.125rem) clamp(3.125rem, 3.8732rem + -3.1925vw, 1rem);
+    }
+
+    @media screen and (max-width: variables.$tablet) {
+      padding: 35px 16px;
+    }
+
+    .pupil-profile-title {
+      padding-top: 70px;
+      text-align: center;
+      font-family: gilroyBold;
+      font-weight: 700;
+      font-size: clamp(1.5625rem, 1.3424rem + 0.939vw, 2.1875rem);
+      line-height: 1.2;
+
+      @media screen and (max-width: 1024px) {
+        padding-top: 0px;
+      }
+
+      @media screen and (max-width: variables.$tablet) {
+        display: none;
+      }
+    }
+
+    // Image section
+    .pupil-profile-image-content-wrapper {
+      margin-top: 50px;
+      width: 100%;
+      display: flex;
+      gap: 1.5rem;
+      padding-bottom: clamp(1.5625rem, 0.8803rem + 2.9108vw, 3.5rem);
+      border-bottom: 1px solid #dfdfdf;
+
+      @media screen and (max-width: variables.$tablet) {
+        margin-top: 0px;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .pupil-profile-avatar-wrapper {
+        width: clamp(4.375rem, 1.8002rem + 10.9859vw, 11.6875rem);
+        height: clamp(4.375rem, 1.8002rem + 10.9859vw, 11.6875rem);
+
+        .pupil-profile-avatar-image {
+          width: clamp(4.375rem, 1.8002rem + 10.9859vw, 11.6875rem);
+          height: clamp(4.375rem, 1.8002rem + 10.9859vw, 11.6875rem);
+          object-fit: cover;
+          border-radius: 50%;
+        }
+      }
+
+      .pupil-profile-image-status {
+        width: 60%;
+
+        @media screen and (max-width: variables.$tablet) {
+          width: 90%;
+        }
+
+        @media screen and (max-width: variables.$tablet) {
+          width: auto;
+        }
+
+        .pupil-profile-image-status-title {
+          font-weight: 600;
+          font-size: clamp(1.0625rem, 0.9965rem + 0.2817vw, 1.25rem);
+          line-height: 1.2;
+          font-family: gilroyBold;
+        }
+
+        .pupil-profile-image-status-content {
+          margin-top: 10px;
+          font-weight: 500;
+          font-size: clamp(0.875rem, 0.809rem + 0.2817vw, 1.0625rem);
+          line-height: 1.2;
+          display: flex;
+          align-items: center;
+          color: rgba(0, 0, 0, 0.68);
+
+          @media screen and (max-width: variables.$tablet) {
+            display: none;
+          }
+        }
+
+        .change-pupil-data-btn {
+          background: #051c78;
+          border-radius: 5px;
+          color: white;
+          padding: clamp(0.625rem, 0.537rem + 0.3756vw, 0.875rem) clamp(0.625rem, 0.3609rem + 1.1268vw, 1.375rem);
+          margin-top: clamp(0.9375rem, 0.6074rem + 1.4085vw, 1.875rem);
+        }
+      }
+    }
+
+    .autobiography {
+      margin-top: clamp(1.875rem, 1.6549rem + 0.939vw, 2.5rem);
+
+      .autobiography-title {
+        font-weight: 700;
+        font-size: clamp(1.125rem, 0.971rem + 0.6573vw, 1.5625rem);
+        line-height: 1.2;
+        font-family: gilroyBold;
+        margin-bottom: 5px;
+      }
+
+      .fname,
+      .lname,
+      .age,
+      .gender,
+      .country,
+      .region,
+      .languages {
+        margin-top: 25px;
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+
+        @media screen and (max-width: variables.$tablet) {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 10px;
+          margin-top: 20px;
+        }
+
+        .fname-title,
+        .lname-title,
+        .age-title,
+        .gender-title,
+        .country-title,
+        .region-title,
+        .languages-title {
+          width: 200px;
+          font-weight: 500;
+          font-size: clamp(0.875rem, 0.6989rem + 0.7512vw, 1.375rem);
+          line-height: 1.2;
+          color: rgba(0, 0, 0, 0.38);
+        }
+
+        .fname-value,
+        .lname-value,
+        .age-value,
+        .gender-value,
+        .country-value,
+        .region-value,
+        .languages-value {
+          font-weight: 600;
+          font-size: clamp(1.0625rem, 0.9525rem + 0.4695vw, 1.375rem);
+          line-height: 1.2;
+        }
+      }
+    }
+
+    .about-me {
+      margin-top: clamp(1.25rem, 0.8099rem + 1.8779vw, 2.5rem);
+
+      .about-me-title {
+        margin-bottom: clamp(0.625rem, 0.4049rem + 0.939vw, 1.25rem);
+        font-weight: 700;
+        font-size: clamp(1.125rem, 0.971rem + 0.6573vw, 1.5625rem);
+        line-height: 1.2;
+      }
+
+      .about-me-content {
+        font-weight: 500;
+        font-size: clamp(0.9375rem, 0.8715rem + 0.2817vw, 1.125rem);
+        line-height: 1.2;
+      }
+    }
+  }
+}

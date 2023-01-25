@@ -1,0 +1,28 @@
+.not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(1.25rem, 0.5898rem + 2.8169vw, 3.125rem);
+  height: calc(100vh - 80px);
+  img {
+    width: clamp(18.75rem, 12.682rem + 25.89vw, 43.75rem);
+  }
+  h1 {
+    color: #051c78;
+    font-size: 70px;
+    font-family: monospace;
+  }
+  a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    width: 260px;
+    height: 55px;
+    background: #051c78;
+    border-radius: 5px;
+    color: white;
+  }
+}

@@ -1,0 +1,391 @@
+@use "../../variables" as variables;
+
+.pupil-profile-data-container {
+  @media screen and (max-width: variables.$laptop) {
+    background-color: #f6f6f6;
+  }
+
+  .pupil-profile-data {
+    padding: 0 205px;
+    max-width: 1440px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+
+    @media screen and (max-width: 1024px) {
+      padding: clamp(2.1875rem, 1.8574rem + 1.4085vw, 3.125rem) clamp(3.125rem, 3.8732rem + -3.1925vw, 1rem);
+    }
+
+    @media screen and (max-width: variables.$tablet) {
+      padding: 35px 16px;
+    }
+
+    .pupil-profile-data-title {
+      padding-top: 70px;
+      text-align: center;
+      font-family: gilroyBold;
+      font-weight: 700;
+      font-size: clamp(1.5625rem, 1.3424rem + 0.939vw, 2.1875rem);
+      line-height: 1.2;
+
+      @media screen and (max-width: 1024px) {
+        padding-top: 0px;
+      }
+
+      @media screen and (max-width: variables.$tablet) {
+        display: none;
+      }
+    }
+
+    // Image section
+    .pupil-profile-data-image-content-wrapper {
+      margin-top: 50px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      padding-bottom: clamp(1.3125rem, 0.5423rem + 3.2864vw, 3.5rem);
+      border-bottom: 1px solid #dfdfdf;
+
+      @media screen and (max-width: variables.$tablet) {
+        margin-top: 0px;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .pupil-profile-data-avatar-wrapper {
+        width: clamp(4.375rem, 1.8002rem + 10.9859vw, 11.6875rem);
+        height: clamp(4.375rem, 1.8002rem + 10.9859vw, 11.6875rem);
+
+        .pupil-profile-data-avatar-image {
+          width: clamp(4.375rem, 1.8002rem + 10.9859vw, 11.6875rem);
+          height: clamp(4.375rem, 1.8002rem + 10.9859vw, 11.6875rem);
+          object-fit: cover;
+          border-radius: 50%;
+        }
+      }
+
+      .pupil-profile-data-image-status {
+        width: 60%;
+
+        @media screen and (max-width: variables.$tablet) {
+          width: 90%;
+        }
+
+        @media screen and (max-width: variables.$tablet) {
+          width: auto;
+        }
+
+        .pupil-profile-data-image-status-title {
+          font-weight: 600;
+          font-size: clamp(1.0625rem, 0.9965rem + 0.2817vw, 1.25rem);
+          line-height: 1.2;
+          font-family: gilroyBold;
+        }
+
+        .pupil-profile-data-image-status-content {
+          margin-top: 10px;
+          font-weight: 500;
+          font-size: clamp(0.875rem, 0.809rem + 0.2817vw, 1.0625rem);
+          line-height: 1.2;
+          display: flex;
+          align-items: center;
+          color: rgba(0, 0, 0, 0.68);
+
+          @media screen and (max-width: variables.$tablet) {
+            display: none;
+          }
+        }
+
+        .upload-user-image {
+          display: inline-block;
+          margin-top: clamp(0.625rem, 0.1849rem + 1.8779vw, 1.875rem);
+          padding: clamp(0.625rem, 0.581rem + 0.1878vw, 0.75rem) clamp(1rem, 0.6039rem + 1.6901vw, 2.125rem);
+          border: 1px solid #dfdfdf;
+          border-radius: 5px;
+          font-weight: 400;
+          font-size: clamp(0.9375rem, 0.8715rem + 0.2817vw, 1.125rem);
+          line-height: 1.2;
+          cursor: pointer;
+          transition: 0.2s ease all;
+
+          @media screen and (max-width: variables.$laptop) {
+            background-color: #fff;
+          }
+
+          @media (hover: hover) {
+            &:hover {
+              background-color: #7bcaff40;
+            }
+          }
+
+          @media (hover: none) {
+            &:active {
+              background-color: #7bcaff40;
+            }
+          }
+        }
+      }
+    }
+
+    // Inputs section
+    .pupil-profile-enter-datas-wrapper {
+      .pupil-profile-personal-info-wrapper,
+      .pupil-profile-education-info-wrapper {
+        .pupil-profile-personal-info-title,
+        .pupil-profile-education-info-title {
+          margin-top: 40px;
+          font-weight: 600;
+          font-size: clamp(1.0625rem, 0.9965rem + 0.2817vw, 1.25rem);
+          line-height: 1.2;
+
+          @media screen and (max-width: variables.$tablet) {
+            margin-top: 20px;
+          }
+        }
+
+        .pupil-profile-personal-info-inputs-wrapper,
+        .pupil-profile-education-info-inputs-wrapper {
+          margin-top: 1.5rem;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 1.5rem;
+
+          @media screen and (max-width: variables.$tablet) {
+            margin-top: 20px;
+            grid-template-columns: 1fr;
+          }
+
+          .profile-data-input {
+            width: 100%;
+            padding: 15px 18px;
+            border: 1px solid #dfdfdf;
+            border-radius: 10px;
+            height: max-content;
+            cursor: pointer;
+
+            &::placeholder {
+              font-weight: 500;
+              font-size: 17px;
+              line-height: 20px;
+              color: rgba(0, 0, 0, 0.38);
+            }
+
+            &:hover {
+              border-color: #000000;
+            }
+
+            &:focus {
+              border: 1px solid #1976d2;
+            }
+          }
+
+          .set-red {
+            border: 1px solid #e06b6b !important;
+          }
+
+          .react-datepicker__tab-loop {
+            position: absolute;
+            z-index: 2;
+
+            .react-datepicker__triangle {
+              display: none;
+            }
+
+            .react-datepicker-popper {
+              scale: 1.2;
+              translate: 10%;
+
+              .arrow {
+                display: flex;
+                align-items: center;
+                transition: all 0.1s ease;
+                cursor: pointer;
+
+                &:hover {
+                  scale: 2;
+                }
+              }
+            }
+          }
+
+          .form-control {
+            min-width: 200px;
+
+            .input-label {
+              margin-top: 3px;
+              padding: 0 3px;
+              font-weight: 500;
+              font-size: 17px;
+              line-height: 20px;
+              color: rgba(0, 0, 0, 0.38);
+              background-color: white;
+            }
+
+            div {
+              border-radius: 10px;
+
+              div {
+                padding: 13px 18px;
+              }
+            }
+          }
+
+          .pupil-gender-accordion {
+            border-radius: 10px;
+            box-shadow: none;
+
+            &::before {
+              opacity: 0;
+            }
+
+            .pupil-gender-accordion-summary {
+              border: 1px solid #dfdfdf;
+              border-radius: 10px;
+
+              .pupil-gender-accordion-summary-typography {
+                font-weight: 500;
+                font-size: 17px;
+                line-height: 20px;
+                color: rgba(0, 0, 0, 0.38);
+              }
+            }
+          }
+
+          [type="date"] {
+            width: 100%;
+            padding: 15px 18px;
+            border: 1px solid #dfdfdf;
+            border-radius: 10px;
+            height: max-content;
+            cursor: pointer;
+
+            &::placeholder {
+              font-weight: 500;
+              font-size: 17px;
+              line-height: 20px;
+              color: rgba(0, 0, 0, 0.38);
+            }
+
+            &:hover {
+              border-color: #000000;
+            }
+
+            &:focus {
+              border: 1px solid #1976d2;
+            }
+          }
+
+          [type="date"]:not(.has-value):before {
+            font-weight: 500;
+            font-size: 17px;
+            line-height: 20px;
+            color: rgba(0, 0, 0, 0.38);
+            width: 100%;
+            content: attr(placeholder);
+          }
+
+          [type="date"]:focus:before {
+            display: none;
+          }
+
+          .valid[type="date"]:before {
+            display: none;
+          }
+        }
+
+        .about-me {
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+          margin-top: 40px;
+          margin-bottom: 40px;
+
+          @media screen and (max-width: variables.$laptop) {
+            margin-top: 20px;
+          }
+
+          .letter-count-note {
+            margin-top: clamp(1rem, 0.8239rem + 0.7512vw, 1.5rem);
+            font-size: clamp(0.625rem, 0.515rem + 0.4695vw, 0.9375rem);
+          }
+
+          .form-control-textarea {
+            width: 100%;
+          }
+
+          .about-me-title {
+            font-weight: 600;
+            font-size: clamp(1.0625rem, 0.9965rem + 0.2817vw, 1.25rem);
+            line-height: 1.2;
+          }
+
+          .about-me-content {
+            padding: 1rem;
+            border: 1px solid #dfdfdf;
+            border-radius: 10px;
+            font-size: 1rem;
+            width: 100%;
+            resize: vertical;
+          }
+
+          .set-red {
+            border: 1px solid #e06b6b;
+          }
+        }
+      }
+    }
+
+    .save-cancel {
+      padding-top: 30px;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      border-top: 1px solid #dfdfdf;
+
+      .save-btn,
+      .cancel-btn {
+        padding: 15px clamp(1.875rem, 1.4349rem + 1.8779vw, 3.125rem);
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        border-radius: 5px;
+      }
+
+      .save-btn {
+        background: #051c78;
+        color: white;
+        transition: 0.2s ease all;
+
+        @media (hover: hover) {
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+
+        @media (hover: none) {
+          &:active {
+            opacity: 0.8;
+          }
+        }
+      }
+
+      .cancel-btn {
+        border: 1px solid #051c78;
+        transition: 0.2s ease all;
+
+        @media (hover: hover) {
+          &:hover {
+            background-color: #7bcaff40;
+          }
+        }
+
+        @media (hover: none) {
+          &:active {
+            background-color: #7bcaff40;
+          }
+        }
+      }
+    }
+  }
+}

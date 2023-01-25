@@ -1,0 +1,105 @@
+.study-materials-tab-pupil {
+
+    .study-materials-tab-pupil-accordion {
+        box-shadow: none;
+
+        .study-materials-tab-pupil-accordion-summary {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            gap: 20px;
+
+            .study-materials-tab-pupil-typography-header {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .study-materials-tab-pupil-typography-title {
+                    font-weight: 600;
+                    font-family: gilroyBold;
+                    font-size: 19px;
+                    line-height: 23px;
+                }
+
+                .study-materials-tab-pupil-subject-content {
+                    font-weight: 600;
+                    font-size: 19px;
+                    line-height: 23px;
+                    color: rgba(0, 0, 0, 0.68);
+                }
+            }
+        }
+
+        .study-materials-tab-pupil-accordion-details {
+
+            .study-materials-tab-pupil-typography-content-item {
+                font-weight: 500;
+                font-size: 17px;
+                line-height: 20px;
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                padding: 15px 0px;
+                cursor: pointer;
+
+                .study-materials-tab-pupil-typography-content-item-icon {
+                    fill: #007AFF;
+                }
+            }
+        }
+    }
+
+    .empty-materials {
+        padding: clamp(1.875rem, 1.5449rem + 1.4085vw, 2.8125rem) 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        .empty-materials-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+
+            .empty-materials-title {
+                font-weight: 700;
+                font-size: clamp(1.25rem, 1.14rem + 0.4695vw, 1.5625rem);
+                line-height: 1.2;
+                font-family: gilroyBold;
+            }
+
+            .empty-materials-description {
+                font-weight: 500;
+                font-size: clamp(0.9375rem, 0.8935rem + 0.1878vw, 1.0625rem);
+                line-height: 1.2;
+                text-align: center;
+            }
+        }
+
+        .add-study-materials {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            height: 100%;
+            padding: clamp(0.875rem, 0.831rem + 0.1878vw, 1rem) clamp(1.875rem, 0.9947rem + 3.7559vw, 4.375rem);
+            background: #051c78;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+            font-weight: 500;
+            font-size: clamp(0.8125rem, 0.7685rem + 0.1878vw, 0.9375rem);
+            line-height: 18px;
+
+            .add-study-materials-icon {
+                fill: #fff;
+            }
+
+            input {
+                display: none;
+            }
+        }
+    }
+}

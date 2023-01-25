@@ -1,0 +1,346 @@
+@use "../../variables"as variables;
+
+.my-students-list {
+  padding: 30px 100px 170px;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  @media only screen and (max-width: variables.$laptop) {
+    padding: 0px;
+  }
+
+  .short-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    @media only screen and (max-width: variables.$laptop) {
+      display: none;
+    }
+
+    .my-students-list-short-link-to-main,
+    .my-students-list-short-link-to-profile {
+      font-weight: 500;
+      font-size: 17px;
+      line-height: 20px;
+      color: rgba(0, 0, 0, 0.68);
+    }
+  }
+
+  .my-students-list-title {
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 42px;
+
+    @media only screen and (max-width: variables.$laptop) {
+      display: none;
+      margin-top: 0px;
+    }
+  }
+
+  .my-students-list-title {
+    text-align: center;
+    margin-top: 80px;
+
+    @media only screen and (max-width: variables.$laptop) {
+      display: none;
+      margin-top: 0px;
+    }
+  }
+
+  .my-students-avatars-wrapper {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    gap: 50px;
+    justify-content: center;
+
+    @media only screen and (max-width: variables.$laptop) {
+      gap: 15px;
+      margin-top: 20px;
+      justify-content: space-between;
+    }
+
+    @media screen and (max-width: variables.$tablet) {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    .my-students-list-avatar-item {
+      text-align: center;
+
+      @media screen and (max-width: variables.$tablet) {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 15px;
+        grid-row-gap: 0px;
+      }
+
+      .avatar-image-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media screen and (max-width: variables.$tablet) {
+          grid-area: 1 / 1 / 2 / 2;
+        }
+
+        .student-img-wrapper {
+          position: relative;
+          width: clamp(3.125rem, 2.4648rem + 2.8169vw, 5rem);
+          height: clamp(3.125rem, 2.4648rem + 2.8169vw, 5rem);
+          border-radius: 50%;
+
+          .student-avatar-img {
+            border-radius: 50%;
+            width: clamp(3.125rem, 2.4648rem + 2.8169vw, 5rem);
+            height: clamp(3.125rem, 2.4648rem + 2.8169vw, 5rem);
+          }
+
+          .status-live {
+            position: absolute;
+            z-index: 1;
+            bottom: 0;
+            right: 5px;
+            width: clamp(0.5rem, 0.346rem + 0.6573vw, 0.9375rem);
+            height: clamp(0.5rem, 0.346rem + 0.6573vw, 0.9375rem);
+            background-color: #4ade80;
+            box-shadow: 0px 0px 0px 2px #ffffff;
+            border-radius: 50%;
+          }
+        }
+      }
+
+      .my-students-list-datas {
+        margin-top: 20px;
+
+        @media screen and (max-width: variables.$laptop) {
+          margin-top: 15px;
+        }
+
+        @media screen and (max-width: variables.$tablet) {
+          margin-top: 0;
+          grid-area: 1 / 2 / 2 / 3;
+
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        margin-top: 20px;
+
+        .my-students-list-item-name {
+          font-weight: 600;
+          font-size: clamp(0.9375rem, 0.8715rem + 0.2817vw, 1.125rem);
+          line-height: 1.2;
+        }
+
+        .my-students-list-item-subject {
+          font-weight: 500;
+          font-size: 17px;
+          line-height: 20px;
+          color: rgba(0, 0, 0, 0.68);
+          margin-top: 10px;
+        }
+
+        .my-students-list-item-name-btn {
+
+          @media screen and (max-width: variables.$tablet) {
+            margin-top: 0px;
+          }
+
+          cursor: pointer;
+          margin-top: 10px;
+          font-weight: 500;
+          font-size: 17px;
+          line-height: 20px;
+          color: #3bb3bd;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+
+          .my-students-list-item-name-btn-write {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+
+            .message-icon {
+              width: clamp(1rem, 0.912rem + 0.3756vw, 1.25rem);
+            }
+
+            .send-message-title {
+              @media screen and (max-width: 600px) {
+                display: none;
+              }
+
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 100%;
+              font-style: normal;
+              font-weight: 500;
+              font-size: clamp(0.9375rem, 0.8935rem + 0.1878vw, 1.0625rem);
+              line-height: 1.2;
+              color: #3bb3bd;
+            }
+          }
+
+          .delete-icon {
+            width: clamp(1rem, 0.912rem + 0.3756vw, 1.25rem);
+          }
+
+          .phone-img {
+            width: clamp(1rem, 0.912rem + 0.3756vw, 1.25rem);
+          }
+        }
+      }
+    }
+
+  }
+  .empty-materials {
+  padding: clamp(1.875rem, 1.5449rem + 1.4085vw, 2.8125rem) 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  .empty-materials-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    .empty-materials-title {
+      font-weight: 700;
+      font-size: clamp(1.25rem, 1.14rem + 0.4695vw, 1.5625rem);
+      line-height: 1.2;
+      font-family: gilroyBold;
+    }
+
+    .empty-materials-description {
+      font-weight: 500;
+      font-size: clamp(0.9375rem, 0.8935rem + 0.1878vw, 1.0625rem);
+      line-height: 1.2;
+      text-align: center;
+    }
+  }
+
+  .add-study-materials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
+    padding: clamp(0.875rem, 0.831rem + 0.1878vw, 1rem) clamp(1.875rem, 0.9947rem + 3.7559vw, 4.375rem);
+    background: #051c78;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-weight: 500;
+    font-size: clamp(0.8125rem, 0.7685rem + 0.1878vw, 0.9375rem);
+    line-height: 18px;
+
+    .add-study-materials-icon {
+      fill: #fff;
+    }
+
+    input {
+      display: none;
+    }
+  }
+}
+}
+
+.user-delete {
+  background-color: #ffffff;
+  padding: 10px;
+  padding-bottom: 40px;
+  border-radius: 10px;
+  max-width: 435px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+
+  .title {
+    display: flex;
+    justify-content: flex-end;
+
+    img {
+      cursor: pointer;
+    }
+  }
+
+  .body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 17px;
+
+    h2 {
+      display: flex;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 25px;
+      line-height: 30px;
+      /* identical to box height */
+
+      /* Dark 87% */
+
+      color: rgba(0, 0, 0, 0.87);
+    }
+
+    p {
+      display: flex;
+      max-width: 355px;
+      text-align: center;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 130%;
+      /* or 21px */
+
+      text-align: center;
+
+      /* Dark 68% */
+
+      color: rgba(0, 0, 0, 0.68);
+    }
+  }
+
+  .btns {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+
+    .btn-delete {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 12px 16px;
+
+      width: 134px;
+      height: 42px;
+      background: #ff3b30;
+      border-radius: 5px;
+      color: #ffffff;
+    }
+
+    .btn-cancel {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 12px 16px;
+
+      height: 42px;
+      border: 1px solid #dfdfdf;
+      border-radius: 5px;
+    }
+  }
+}

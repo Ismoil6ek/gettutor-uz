@@ -1,0 +1,94 @@
+.progress-verification {
+  margin-top: 1rem;
+  padding: 20px 25px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 10px;
+
+  .progress-verification-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dfdfdf;
+
+    .verification-logo {
+      width: clamp(2.5rem, 1.6054rem + 3.8168vw, 3.4375rem);
+    }
+
+    .verification-title-content-wrapper {
+      .verification-title {
+        font-weight: 600;
+        font-size: clamp(0.9375rem, 0.8275rem + 0.4695vw, 1.25rem);
+        line-height: 1.2;
+      }
+
+      .verification-content {
+        margin-top: 0.5rem;
+        font-weight: 500;
+        font-size: clamp(0.875rem, 0.809rem + 0.2817vw, 1.0625rem);
+        line-height: 1.2;
+        display: flex;
+        align-items: center;
+        color: rgba(0, 0, 0, 0.38);
+      }
+    }
+  }
+
+  .progress-verification-body {
+    margin-top: 20px;
+
+    .progress-verification-body-title {
+      font-weight: 600;
+      font-size: clamp(0.875rem, 0.787rem + 0.3756vw, 1.125rem);
+      line-height: 1.2;
+      display: flex;
+      align-items: center;
+      color: rgba(0, 0, 0, 0.68);
+    }
+
+    .verify-progress {
+      margin-top: 0.7rem;
+      width: 100%;
+      height: 1.5rem;
+      accent-color: #007aff;
+
+      &::-webkit-progress-value {
+        border-radius: 10px;
+      }
+    }
+
+    .progress-value {
+      margin-top: 5px;
+      font-weight: 500;
+      font-size: clamp(0.875rem, 0.831rem + 0.1878vw, 1rem);
+      line-height: 1.2;
+      display: flex;
+      align-items: center;
+      color: #007aff;
+    }
+  }
+
+  .progress-verification-footer {
+    margin-top: 1rem;
+    // background-color: red;
+
+    .complete-anketa-btn {
+      padding: 1rem 0;
+      text-align: center;
+      width: 100%;
+      display: inline-block;
+      text-decoration: none;
+      background: rgba(0, 122, 255, 0.2);
+      border-radius: 5px;
+      font-size: clamp(0.875rem, 0.809rem + 0.2817vw, 1.0625rem);
+      line-height: 1.2;
+    }
+  }
+}
+
+.completed {
+  display: none;
+}

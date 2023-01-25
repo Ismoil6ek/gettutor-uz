@@ -1,0 +1,47 @@
+.terms-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-inline: clamp(0.9375rem, -0.9331rem + 7.9812vw, 6.25rem);
+  padding-block: 40px;
+  user-select: none;
+  h1 {
+    text-align: center;
+  }
+
+  h4 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.33;
+    color: rgba(0, 0, 0, 0.75);
+    margin-block: 1rem;
+    text-align: center;
+  }
+
+  h5 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.33;
+    color: rgba(0, 0, 0, 0.75);
+    margin-block: 1rem;
+  }
+  
+  .terms-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.33;
+    color: rgb(0, 0, 0);
+    margin-bottom: 0;
+  }
+
+  .terms-body {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.33;
+    color: rgba(0, 0, 0, 0.75);
+    margin-block: 1rem;
+  }
+}

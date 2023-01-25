@@ -1,0 +1,66 @@
+@use '../../variables'as variables;
+
+.ad {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url('../../assets/images/back-ad.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 173px;
+    border-radius: 10px;
+    padding: 20px 30px;
+
+    @media only screen and (max-width: variables.$laptop) {
+        background-image: url('../../assets/svg/ad_tablet.svg');
+        border-radius: 0px;
+        margin: 0 -30px;
+        padding: 18px 30px;
+    }
+
+    @media only screen and (max-width: variables.$tablet) {
+        background-image: url('../../assets/svg/ad_mobile.svg');
+        height: auto;
+        background-size: cover;
+        padding: 20px 16px;
+        margin: 0px;
+        height: 200px;
+    }
+
+    .ad-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .ad-content {
+            font-weight: 700;
+            font-size: clamp(1.375rem, 1.309rem + 0.2817vw, 1.5625rem);
+            line-height: 1.2;
+            color: #fff;
+            max-width: clamp(21.875rem, 19.0141rem + 12.2066vw, 30rem);
+        }
+
+        .remove-icon {
+            fill: #fff;
+            cursor: pointer;
+        }
+    }
+
+    .buy-subscription-btn {
+        width: max-content;
+        border-radius: 5px;
+        padding: 15px clamp(1rem, 0.3838rem + 2.6291vw, 2.75rem);
+        background-color: #fff;
+        font-weight: 600;
+        font-size: clamp(0.9375rem, 0.8935rem + 0.1878vw, 1.0625rem);
+        line-height: 1.2;
+    }
+}
+
+.hide {
+    display: none;
+}
+
+.remove {
+    display: none;
+}

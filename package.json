@@ -1,0 +1,75 @@
+{
+  "name": "gettutor-uz",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.10.16",
+    "@mui/material": "^5.10.17",
+    "@reduxjs/toolkit": "^1.9.1",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.4",
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.9",
+    "aos": "^2.3.4",
+    "axios": "^1.2.1",
+    "countup.js": "^2.3.2",
+    "firebase": "^9.15.0",
+    "gapi-script": "^1.2.0",
+    "i18next": "^22.4.5",
+    "laravel-echo": "^1.14.2",
+    "lodash": "^4.17.21",
+    "material-ui-popup-state": "^4.1.0",
+    "pusher-js": "^4.3.0",
+    "react": "^18.2.0",
+    "react-copy-to-clipboard": "^5.1.0",
+    "react-dom": "^18.2.0",
+    "react-easy-crop": "^4.6.3",
+    "react-google-login": "^5.2.2",
+    "react-i18next": "^12.0.0",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.4.4",
+    "react-scripts": "5.0.1",
+    "react-snowfall": "^1.2.1",
+    "react-toastify": "^9.1.1",
+    "react-use-websocket": "^4.2.0",
+    "sass": "^1.56.1",
+    "scss": "^0.2.4",
+    "swiper": "^8.4.5",
+    "typescript": "^4.9.3",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/aos": "^3.0.4",
+    "@types/lodash": "^4.14.191",
+    "@types/react-datepicker": "^4.8.0"
+  }
+}

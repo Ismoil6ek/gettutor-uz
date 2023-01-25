@@ -1,0 +1,1077 @@
+@use "../../variables" as variables;
+
+.teacher-profile-data-container {
+  @media screen and (max-width: variables.$laptop) {
+    background-color: #f6f6f6;
+  }
+
+  .teacher-profile-data {
+    padding: 0 205px;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+
+    @media screen and (max-width: variables.$laptop) {
+      background-color: #f6f6f6;
+    }
+
+    @media screen and (max-width: 1024px) {
+      padding: clamp(2.1875rem, 1.8574rem + 1.4085vw, 3.125rem)
+        clamp(3.125rem, 3.8732rem + -3.1925vw, 1rem);
+    }
+
+    @media screen and (max-width: variables.$tablet) {
+      padding: 35px 16px;
+    }
+
+    .teacher-profile-data-title {
+      padding-top: 70px;
+      text-align: center;
+      font-family: gilroyBold;
+      font-weight: 700;
+      font-size: clamp(1.5625rem, 1.3424rem + 0.939vw, 2.1875rem);
+      line-height: 1.2;
+
+      @media screen and (max-width: 1024px) {
+        padding-top: 0px;
+      }
+
+      @media screen and (max-width: variables.$tablet) {
+        display: none;
+      }
+    }
+
+    // Image section
+    .teacher-profile-data-image-content-wrapper {
+      margin-top: 50px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      padding-bottom: clamp(1.3125rem, 0.5423rem + 3.2864vw, 3.5rem);
+      border-bottom: 1px solid #dfdfdf;
+
+      @media screen and (max-width: variables.$tablet) {
+        margin-top: 0px;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .teacher-profile-data-avatar-wrapper {
+        width: clamp(4.375rem, 1.8002rem + 10.9859vw, 11.6875rem);
+        height: clamp(4.375rem, 1.8002rem + 10.9859vw, 11.6875rem);
+
+        .teacher-profile-data-avatar-image {
+          width: clamp(4.375rem, 1.8002rem + 10.9859vw, 11.6875rem);
+          height: clamp(4.375rem, 1.8002rem + 10.9859vw, 11.6875rem);
+          object-fit: cover;
+          border-radius: 50%;
+        }
+      }
+
+      .teacher-profile-data-image-status {
+        width: 60%;
+
+        @media screen and (max-width: variables.$tablet) {
+          width: 90%;
+        }
+
+        @media screen and (max-width: variables.$tablet) {
+          width: auto;
+        }
+
+        .teacher-profile-data-image-status-title {
+          font-weight: 600;
+          font-size: clamp(1.0625rem, 0.9965rem + 0.2817vw, 1.25rem);
+          line-height: 1.2;
+          font-family: gilroyBold;
+        }
+
+        .teacher-profile-data-image-status-content {
+          margin-top: 10px;
+          font-weight: 500;
+          font-size: clamp(0.875rem, 0.809rem + 0.2817vw, 1.0625rem);
+          line-height: 1.2;
+          display: flex;
+          align-items: center;
+          color: rgba(0, 0, 0, 0.68);
+
+          @media screen and (max-width: variables.$tablet) {
+            display: none;
+          }
+        }
+
+        .upload-user-image {
+          display: inline-block;
+          margin-top: clamp(0.625rem, 0.1849rem + 1.8779vw, 1.875rem);
+          padding: clamp(0.625rem, 0.581rem + 0.1878vw, 0.75rem)
+            clamp(1rem, 0.6039rem + 1.6901vw, 2.125rem);
+          border: 1px solid #dfdfdf;
+          border-radius: 5px;
+          font-weight: 400;
+          font-size: clamp(0.9375rem, 0.8715rem + 0.2817vw, 1.125rem);
+          line-height: 1.2;
+          cursor: pointer;
+          transition: 0.2s ease all;
+
+          &.set-red {
+            border: 1px solid #e06b6b !important;
+          }
+
+          @media screen and (max-width: variables.$laptop) {
+            background-color: #fff;
+          }
+
+          @media (hover: hover) {
+            &:hover {
+              background-color: #7bcaff40;
+            }
+          }
+
+          @media (hover: none) {
+            &:active {
+              background-color: #7bcaff40;
+            }
+          }
+        }
+      }
+    }
+
+    // Autobiography Inputs section
+    .teacher-profile-enter-datas-wrapper {
+      .teacher-profile-personal-info-wrapper,
+      .teacher-profile-education-info-wrapper {
+        .teacher-profile-personal-info-title,
+        .teacher-profile-education-info-title {
+          margin-top: 40px;
+          font-weight: 600;
+          font-size: clamp(1.0625rem, 0.9965rem + 0.2817vw, 1.25rem);
+          line-height: 1.2;
+
+          @media screen and (max-width: variables.$tablet) {
+            margin-top: 20px;
+          }
+        }
+
+        .teacher-profile-personal-info-inputs-wrapper,
+        .teacher-profile-education-info-inputs-wrapper {
+          margin-top: 1.5rem;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 1.5rem;
+
+          @media screen and (max-width: variables.$tablet) {
+            margin-top: 20px;
+            grid-template-columns: 1fr;
+          }
+
+          .profile-data-input {
+            width: 100%;
+            padding: 15px 18px;
+            border: 1px solid #dfdfdf;
+            border-radius: 10px;
+            height: max-content;
+            font-size: clamp(0.9375rem, 0.8935rem + 0.1878vw, 1.0625rem);
+            line-height: 1.2;
+            cursor: pointer;
+
+            &::placeholder {
+              font-weight: 500;
+              font-size: 17px;
+              line-height: 20px;
+              color: rgba(0, 0, 0, 0.38);
+            }
+
+            &:hover {
+              border-color: #000000;
+            }
+
+            &:focus {
+              border: 1px solid #1976d2;
+            }
+          }
+
+          .form-control {
+            min-width: 200px;
+
+            .input-label {
+              margin-top: 3px;
+              padding: 0 3px;
+              font-weight: 500;
+              font-size: 17px;
+              line-height: 20px;
+              color: rgba(0, 0, 0, 0.38);
+              background-color: white;
+            }
+
+            div {
+              border-radius: 10px;
+
+              div {
+                padding: 13px 18px;
+
+                @media screen and (max-width: variables.$laptop) {
+                  background-color: #fff;
+                }
+              }
+            }
+
+            //  MuiMenuItem-gutters css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root
+          }
+
+          .css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root,
+          .css-jedpe8-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
+            font-size: clamp(0.9375rem, 0.8935rem + 0.1878vw, 1.0625rem);
+            font-family: semiBold, sans-serif;
+            color: rgba(0, 0, 0, 0.87);
+          }
+
+          .react-datepicker__tab-loop {
+            position: absolute;
+            z-index: 2;
+
+            .react-datepicker__triangle {
+              display: none;
+            }
+
+            .react-datepicker-popper {
+              scale: 1.2;
+              translate: 10%;
+
+              .arrow {
+                display: flex;
+                align-items: center;
+                transition: all 0.1s ease;
+                cursor: pointer;
+
+                &:hover {
+                  scale: 2;
+                }
+              }
+            }
+          }
+
+          .teacher-gender-accordion {
+            border-radius: 10px;
+            box-shadow: none;
+
+            &::before {
+              opacity: 0;
+            }
+
+            .teacher-gender-accordion-summary {
+              border: 1px solid #dfdfdf;
+              border-radius: 10px;
+
+              .teacher-gender-accordion-summary-typography {
+                font-weight: 500;
+                font-size: 17px;
+                line-height: 20px;
+                color: rgba(0, 0, 0, 0.38);
+              }
+            }
+          }
+
+          [type="date"] {
+            width: 100%;
+            padding: 15px 18px;
+            border: 1px solid #dfdfdf;
+            border-radius: 10px;
+            height: max-content;
+            cursor: pointer;
+
+            &::placeholder {
+              font-weight: 500;
+              font-size: 17px;
+              line-height: 20px;
+              color: rgba(0, 0, 0, 0.38);
+            }
+
+            &:hover {
+              border-color: #000000;
+            }
+
+            &:focus {
+              border: 1px solid #1976d2;
+            }
+          }
+
+          [type="date"]:not(.has-value):before {
+            font-weight: 500;
+            font-size: 17px;
+            line-height: 20px;
+            color: rgba(0, 0, 0, 0.38);
+            width: 100%;
+            content: attr(placeholder);
+          }
+
+          [type="date"]:focus:before {
+            display: none;
+          }
+
+          .valid[type="date"]:before {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .about-me {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-top: 40px;
+      margin-bottom: 40px;
+
+      @media screen and (max-width: variables.$laptop) {
+        margin-top: 20px;
+      }
+
+      .form-control-textarea {
+        width: 100%;
+      }
+
+      .about-me-title {
+        font-weight: 600;
+        font-size: clamp(1.0625rem, 0.9965rem + 0.2817vw, 1.25rem);
+        line-height: 1.2;
+      }
+
+      .about-me-content {
+        margin-top: 20px;
+        padding: 1rem;
+        border: 1px solid #dfdfdf;
+        border-radius: 10px;
+        font-size: 1rem;
+        width: 100%;
+        resize: vertical;
+      }
+    }
+
+    .cost-lesson {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      .cost-lesson-title {
+        font-weight: 600;
+        font-size: clamp(1.0625rem, 0.9965rem + 0.2817vw, 1.25rem);
+        line-height: 1.2;
+        color: rgba(0, 0, 0, 0.68);
+      }
+
+      .cost-wrapper {
+        display: flex;
+        align-items: end;
+        gap: 30px;
+      }
+
+      .range-box {
+        .slider-range {
+          height: 10px;
+          border: none;
+
+          .MuiSlider-rail {
+            background-color: rgba(0, 0, 0, 0.38);
+          }
+
+          .MuiSlider-track {
+            border: none;
+            background-color: #007aff;
+          }
+
+          .MuiSlider-thumb {
+            background-color: #007aff;
+          }
+        }
+      }
+
+      .free-lesson-form-group {
+        display: inline-block;
+
+        .free-lesson-form-control-label {
+          padding-inline: 20px;
+          display: flex;
+          gap: 20px;
+          width: fit-content;
+
+          .MuiTypography-root {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 24px;
+            color: rgba(0, 0, 0, 0.68);
+          }
+
+          .free-lesson-checkbox {
+            accent-color: #007aff;
+            transform: scale(1.5);
+          }
+        }
+      }
+    }
+
+    // Daily Schedule
+
+    .schedule-classes {
+      margin-top: clamp(2.1875rem, 1.8574rem + 1.4085vw, 3.125rem);
+
+      .schedule-classes-title {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+      }
+
+      .schedules {
+        margin-top: 1.5rem;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 10px;
+
+        @media screen and (max-width: 1280px) {
+          grid-template-columns: repeat(6, 1fr);
+        }
+
+        @media screen and (max-width: 1150px) {
+          grid-template-columns: repeat(5, 1fr);
+        }
+
+        @media screen and (max-width: 800px) {
+          grid-template-columns: repeat(4, 1fr);
+        }
+
+        @media screen and (max-width: 600px) {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media screen and (max-width: variables.$tablet) {
+          justify-content: center;
+        }
+
+
+        .schedule {
+          padding: 10px 0px;
+          width: 100%;
+          border: 1px solid #dfdfdf;
+          border-radius: 10px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          gap: 50px;
+          cursor: pointer;
+          transition: 0.3s ease all;
+
+          @media screen and (max-width: variables.$laptop) {
+            background-color: white;
+          }
+
+          &.active {
+            background: #007aff;
+            border: 1px solid #007aff;
+
+            .day {
+              color: #fff;
+            }
+
+            .time {
+              color: #fff;
+              text-align: center;
+            }
+
+            &:hover {
+              background-color: #2349e1;
+              border: 1px solid #2349e1;
+            }
+          }
+
+          .day {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+          }
+
+          .time {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            text-align: center;
+
+            .time-item {
+              font-weight: 500;
+              font-size: 20px;
+              line-height: 24px;
+              color: rgba(0, 0, 0, 0.68);
+            }
+          }
+
+          &:hover {
+            background: #f2f2f2;
+          }
+        }
+      }
+    }
+
+    .supporting-documents {
+      margin-top: 40px;
+      padding-bottom: 50px;
+      border-bottom: 1px solid #dfdfdf;
+
+      .supporting-documents-title {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+      }
+
+      .documents {
+        margin-top: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+
+        .certificates {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+          grid-auto-flow: dense;
+          gap: 20px;
+          width: 100%;
+
+          .upload-popup-btn {
+            height: 200px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+            @media screen and (max-width: variables.$tablet) {
+              height: 40px;
+
+              .image-uploader-label {
+                flex-direction: row;
+              }
+            }
+
+            .image-uploader-label {
+              width: 100%;
+              height: 100%;
+            }
+          }
+
+          .preview-document {
+            height: max-content;
+            width: 100%;
+            height: 100%;
+
+            .certificate-image-wrapper {
+              position: relative;
+              cursor: pointer;
+
+              .remove-image {
+                width: 40px;
+                height: 30px;
+                border-radius: 0 0 0 5px;
+                background-color: rgb(255, 255, 255);
+                position: absolute;
+                top: 0;
+                right: 0;
+                z-index: 10;
+                text-align: center;
+                margin: auto 0;
+                align-items: center;
+                display: none;
+
+                .MuiSvgIcon-root {
+                  fill: red;
+                }
+              }
+
+              .preview-document-image {
+                transition: 0.2s ease all;
+                z-index: 7;
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+
+                &:hover {
+                  filter: brightness(50%);
+                }
+              }
+
+              &:hover .remove-image {
+                display: block;
+              }
+            }
+
+            .document-name {
+              display: flex;
+              flex-direction: column;
+              gap: 5px;
+
+              .preview-document-title {
+                font-weight: 500;
+                font-size: 17px;
+                line-height: 20px;
+                color: #000000;
+              }
+            }
+          }
+
+          button {
+            background-color: rgb(255, 255, 255);
+            box-shadow: none;
+            width: 154px;
+
+            @media screen and (max-width: variables.$laptop) {
+              background-color: #f6f6f6;
+            }
+
+            &:hover {
+              box-shadow: none;
+            }
+
+            .image-uploader-label {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              gap: 1.5rem;
+              font-weight: 500;
+              font-size: 17px;
+              line-height: 20px;
+              cursor: pointer;
+              border: 1px solid #dfdfdf;
+              border-radius: 3px;
+
+              &:hover {
+                background-color: #d2c7c732;
+              }
+            }
+          }
+        }
+
+        .upload-image {
+          border: 1px solid #dfdfdf;
+          border-radius: 3px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+
+    .save-cancel {
+      margin-top: 30px;
+      display: flex;
+      align-items: flex-start;
+      gap: 1.5rem;
+
+      .wrapper {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .save-btn,
+      .cancel-btn {
+        padding: 15px clamp(1.875rem, 1.4349rem + 1.8779vw, 3.125rem);
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        border-radius: 5px;
+      }
+
+      .save-btn {
+        background: #051c78;
+        color: white;
+        transition: 0.2s ease all;
+
+        @media (hover: hover) {
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+
+        @media (hover: none) {
+          &:active {
+            opacity: 0.8;
+          }
+        }
+      }
+
+      .cancel-btn {
+        border: 1px solid #051c78;
+        transition: 0.2s ease all;
+
+        @media (hover: hover) {
+          &:hover {
+            background-color: #7bcaff40;
+          }
+        }
+
+        @media (hover: none) {
+          &:active {
+            background-color: #7bcaff40;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Modal in schedule section`s style
+.modal {
+  .box-modal {
+    padding: 20px;
+
+    .modal-content {
+      .modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+
+        .modal-title {
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 24px;
+          font-family: gilroyBold;
+        }
+
+        .close-modal-icon {
+          cursor: pointer;
+        }
+      }
+
+      .modal-time {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        .beginning-time,
+        .finishing-time {
+          .beginning-time-title,
+          .finishing-time-title {
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 15px;
+            color: rgba(0, 0, 0, 0.38);
+          }
+
+          .beginning-time-inputs,
+          .finishing-time-inputs {
+            margin-top: 5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            .beginning-time-hour-input,
+            .beginning-time-minute-input,
+            .finishing-time-hour-input,
+            .finishing-time-minute-input {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: 10px;
+              background: #f5f5f5;
+              border-radius: 4px;
+              border: none;
+              width: 96px;
+              height: 80px;
+              font-weight: 400;
+              font-size: 40px;
+              line-height: 64px;
+              font-family: gilroyBold;
+              color: rgba(0, 0, 0, 0.68);
+              text-align: center;
+
+              &:focus {
+                background-color: #fff;
+                border: 1px solid black;
+              }
+
+              @media screen and (max-width: variables.$tablet) {
+                width: 60px;
+                height: 50px;
+                padding: 5px;
+
+                font-size: 35px;
+                line-height: 50px;
+              }
+            }
+          }
+        }
+      }
+
+      .modal-buttons {
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .save-modal-btn,
+        .second-save-modal-btn,
+        .add-modal-time-btn {
+          padding: 12px 16px;
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 18px;
+          border-radius: 5px;
+        }
+
+        .save-modal-btn,
+        .second-save-modal-btn {
+          color: white;
+          background: linear-gradient(
+            213.62deg,
+            #0023b8 -13.84%,
+            #566fd8 121.86%
+          );
+        }
+
+        .second-save-modal-btn {
+          display: none;
+          // color: red;
+        }
+
+        .add-modal-time-btn {
+          border: 1px solid #dfdfdf;
+        }
+      }
+    }
+  }
+}
+
+// Popover
+.upload-popover {
+  div.MuiPaper-elevation8 {
+    width: 450px;
+
+    .upolad-popover-header {
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 1em;
+      border-bottom: 1px solid #e8e8e8;
+
+      .upload-popover-title {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 25px;
+      }
+    }
+
+    .upload-popover-body {
+      padding: 20px;
+
+      .upload-file-title {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        color: rgba(0, 0, 0, 0.68);
+      }
+
+      .upload-document-btn,
+      .upload-certificate-btn {
+        display: block;
+        margin-top: 10px;
+        width: 100%;
+        padding: 12px 0px;
+        background: #f4f4f4;
+        border-radius: 5px;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      .body-title {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 17px;
+        color: rgba(0, 0, 0, 0.68);
+      }
+
+      .upload-file {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 10px;
+        background: #fcfcfd;
+        border: 1px solid #dfdfdf;
+        border-radius: 12px;
+
+        .file-logo {
+          width: 45px;
+          height: 45px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          background: #ebeff7;
+        }
+
+        .file-data {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          flex: 1;
+
+          .name-upload-proccess {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .file-name {
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 16px;
+              color: #87898e;
+            }
+
+            .upload-proccess {
+              font-weight: 400;
+              font-size: 12px;
+              line-height: 16px;
+              color: #87898e;
+            }
+          }
+
+          .progress-file {
+            width: 100%;
+
+            progress {
+              width: 100%;
+            }
+          }
+        }
+
+        .change-file {
+          cursor: pointer;
+          font-size: 0;
+        }
+      }
+
+      .enter-file-name {
+        margin-top: 20px;
+        padding: 1rem;
+        border: 1px solid #dfdfdf;
+        border-radius: 10px;
+        width: 100%;
+        font-size: 1.2rem;
+      }
+
+      .certificate-name-score-wrapper {
+        margin-top: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+
+        .form-control {
+          // min-width: 200px;
+
+          .input-label {
+            margin-top: 3px;
+            padding: 0 3px;
+            font-weight: 500;
+            font-size: 17px;
+            line-height: 20px;
+            color: rgba(0, 0, 0, 0.38);
+            background-color: white;
+          }
+
+          div {
+            border-radius: 10px;
+
+            div {
+              padding: 13px 18px;
+            }
+          }
+        }
+      }
+
+      .add-cancel-btn-wrapper {
+        margin-top: 3rem;
+
+        .add-certificate {
+          padding: 12px 1rem;
+          color: white;
+          background: #051c78;
+          border-radius: 5px;
+        }
+
+        .cancel-action {
+          padding: 10px 1rem;
+          border-radius: 5px;
+          border: 2px solid #051c78;
+          margin-left: 10px;
+        }
+      }
+
+      .upolad-popover-btn {
+        padding: 32px 0px;
+        border: 1px dashed #8c8c8c;
+        border-radius: 8px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5em;
+        cursor: pointer;
+      }
+    }
+
+    .image-uploader {
+      display: none;
+    }
+  }
+}
+
+// Modal
+.css-16rzug5 {
+  border: none !important;
+  border-radius: 5px;
+}
+
+// Certificate Dialog
+
+.dialog-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+
+  .dialog-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    font-family: gilroyBold;
+  }
+
+  .confirm-command-btn {
+    padding: 12px 1rem;
+    background: #051c78;
+    border-radius: 5px;
+    color: white;
+    margin-right: 10px;
+    margin-top: 30px;
+  }
+
+  .cancel-btn {
+    padding: 11px 1rem;
+    border: 1px solid #051c78;
+    border-radius: 5px;
+    margin-top: 30px;
+  }
+}
+
+.css-1m3p9o7 {
+  @media screen and (max-width: variables.$laptop) {
+    width: auto !important;
+    padding: 0px 10px;
+  }
+}
+
+.set-red-text {
+  color: #e06b6b !important;
+}

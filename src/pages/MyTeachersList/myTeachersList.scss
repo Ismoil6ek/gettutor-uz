@@ -1,0 +1,242 @@
+@use "../../variables" as variables;
+
+.my-teachers-list {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 30px 100px 170px;
+
+  @media only screen and (max-width: variables.$laptop) {
+    padding: 0px;
+  }
+
+  .short-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    @media only screen and (max-width: variables.$laptop) {
+      display: none;
+    }
+
+    .my-teachers-list-short-link-to-main,
+    .my-teachers-list-short-link-to-profile {
+      font-weight: 500;
+      font-size: 17px;
+      line-height: 20px;
+      color: rgba(0, 0, 0, 0.68);
+    }
+  }
+
+  .my-teachers-list-title {
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 42px;
+
+    @media only screen and (max-width: variables.$laptop) {
+      display: none;
+      margin-top: 0px;
+    }
+  }
+
+  .my-teachers-list-title {
+    text-align: center;
+    margin-top: 80px;
+  }
+
+  .my-teachers-avatars-wrapper {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    gap: 50px;
+    justify-content: center;
+
+    @media only screen and (max-width: variables.$laptop) {
+      gap: 15px;
+      margin-top: 20px;
+      justify-content: space-between;
+    }
+
+    @media screen and (max-width: variables.$tablet) {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    .my-teachers-list-avatar-item {
+      text-align: center;
+
+      @media screen and (max-width: variables.$tablet) {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 15px;
+        grid-row-gap: 0px;
+      }
+
+      .avatar-image-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media screen and (max-width: variables.$tablet) {
+          grid-area: 1 / 1 / 2 / 2;
+        }
+
+        .teacher-img-wrapper {
+          position: relative;
+          width: clamp(3.125rem, 2.4648rem + 2.8169vw, 5rem);
+          height: clamp(3.125rem, 2.4648rem + 2.8169vw, 5rem);
+          border-radius: 50%;
+
+          .teacher-avatar-img {
+            border-radius: 50%;
+            width: clamp(3.125rem, 2.4648rem + 2.8169vw, 5rem);
+            height: clamp(3.125rem, 2.4648rem + 2.8169vw, 5rem);
+          }
+
+          .status-live {
+            position: absolute;
+            z-index: 1;
+            bottom: 0;
+            right: 5px;
+            width: clamp(0.5rem, 0.346rem + 0.6573vw, 0.9375rem);
+            height: clamp(0.5rem, 0.346rem + 0.6573vw, 0.9375rem);
+            background-color: #4ade80;
+            box-shadow: 0px 0px 0px 2px #ffffff;
+            border-radius: 50%;
+          }
+        }
+      }
+
+      .my-teachers-list-datas {
+        margin-top: 20px;
+
+        @media screen and (max-width: variables.$laptop) {
+          margin-top: 15px;
+        }
+
+        @media screen and (max-width: variables.$tablet) {
+          margin-top: 0px;
+          grid-area: 1 / 2 / 2 / 3;
+
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .my-teachers-list-item-name {
+          display: block;
+          font-weight: 600;
+          font-size: clamp(0.9375rem, 0.8715rem + 0.2817vw, 1.125rem);
+          line-height: 1.16;
+        }
+
+        .my-teachers-list-item-subject {
+          font-weight: 500;
+          font-size: 17px;
+          line-height: 20px;
+          color: rgba(0, 0, 0, 0.68);
+          margin-top: 10px;
+        }
+
+        .my-teachers-list-item-name-btn {
+          @media screen and (max-width: variables.$tablet) {
+            margin-top: 0px;
+          }
+
+          margin-top: 10px;
+          font-weight: 500;
+          font-size: 17px;
+          line-height: 20px;
+          color: #3bb3bd;
+          cursor: pointer;
+        }
+
+        .my-students-list-datas {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          @media screen and (max-width: variables.$laptop) {
+            margin-top: 0px;
+          }
+          @media screen and (max-width: 768px) {
+            margin-top: 0px;
+            flex-direction: row;
+            gap: 10px;
+          }
+
+          margin-top: 20px;
+
+          .my-students-list-item-name {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 21px;
+          }
+
+          .my-students-list-item-subject {
+            font-weight: 500;
+            font-size: 17px;
+            line-height: 20px;
+            color: rgba(0, 0, 0, 0.68);
+            margin-top: 10px;
+          }
+
+          .my-students-list-item-name-btn {
+            @media screen and (max-width: variables.$tablet) {
+              margin-top: 0px;
+            }
+
+            cursor: pointer;
+            margin-top: 10px;
+            font-weight: 500;
+            font-size: 17px;
+            line-height: 20px;
+            color: #3bb3bd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            .my-students-list-item-name-btn-write {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              gap: 5px;
+
+              .send-message-title {
+                @media screen and (max-width: 600px) {
+                  display: none;
+                }
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                font-style: normal;
+                font-weight: 500;
+                font-size: clamp(0.9375rem, 0.8935rem + 0.1878vw, 1.0625rem);
+                line-height: 21px;
+                color: #3bb3bd;
+              }
+
+              img {
+                width: clamp(1rem, 0.912rem + 0.3756vw, 1.25rem);
+              }
+              .phone-img {
+                width: clamp(1rem, 0.912rem + 0.3756vw, 1.25rem);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .no-teacher {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-direction: column;
+    margin-top: 100px;
+  }
+}

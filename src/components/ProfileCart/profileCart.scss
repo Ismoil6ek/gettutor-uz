@@ -1,0 +1,265 @@
+// Colors
+$GREEN: #34c759;
+$DARK: rgba(0, 0, 0, 0.68);
+
+@use "../../variables"as variables;
+
+.profile-cart {
+  padding: 30px 30px 20px;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 10px;
+  height: max-content;
+
+  @media only screen and (max-width: variables.$laptop) {
+    display: grid;
+    grid-template-columns: auto 1fr 2fr;
+    grid-template-rows: repeat(1fr, auto);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    padding: 25px;
+  }
+
+  @media only screen and (max-width: variables.$tablet) {
+    padding: 25px 16px;
+
+    display: grid;
+    grid-template-columns: auto repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 0px;
+    border-radius: 0px;
+  }
+
+  .profile-cart-avatar {
+    border-radius: 50%;
+    width: clamp(4.375rem, 2.4604rem + 8.169vw, 9.8125rem);
+    height: clamp(4.375rem, 2.4604rem + 8.169vw, 9.8125rem);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+
+    @media only screen and (max-width: variables.$laptop) {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+
+    @media only screen and (max-width: variables.$tablet) {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+
+    img {
+      height: clamp(4.375rem, 2.4604rem + 8.169vw, 9.8125rem);
+      width: 100%;
+    }
+  }
+
+  .user-datas {
+    margin: 25px 0px 50px;
+
+    @media only screen and (max-width: variables.$laptop) {
+      text-align: start;
+      grid-area: 1 / 2 / 2 / 3;
+    }
+
+    @media only screen and (max-width: variables.$tablet) {
+      grid-area: 1 / 2 / 2 / 4;
+
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto 1fr;
+      grid-column-gap: 0px;
+      grid-row-gap: 5px;
+      margin: 0px;
+    }
+
+    .user-role {
+      margin-bottom: 8px;
+      font-weight: 500;
+      font-size: clamp(0.875rem, 0.809rem + 0.2817vw, 1.0625rem);
+      line-height: 1.2;
+      color: rgba(0, 0, 0, 0.38);
+
+      @media only screen and (max-width: variables.$tablet) {
+        grid-area: 1 / 1 / 2 / 2;
+        margin-bottom: 0px;
+      }
+    }
+
+    .user-name-badge {
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      gap: 5px;
+
+      @media only screen and (max-width: variables.$laptop) {
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
+
+      @media only screen and (max-width: variables.$tablet) {
+        grid-area: 2 / 1 / 3 / 2;
+      }
+
+      .user-name {
+        font-weight: 700;
+        font-size: clamp(1.25rem, 1.184rem + 0.2817vw, 1.4375rem);
+        line-height: 1.2;
+        font-family: gilroyBold;
+      }
+
+      .badge {
+        fill: #0096b2;
+      }
+    }
+
+    .user-status {
+      color: $GREEN;
+      line-height: 1.2;
+      font-size: clamp(0.9375rem, 0.8935rem + 0.1878vw, 1.0625rem);
+
+      @media only screen and (max-width: variables.$tablet) {
+        grid-area: 1 / 2 / 3 / 3;
+        text-align: end;
+      }
+    }
+  }
+
+  .user-activity {
+    @media only screen and (max-width: variables.$laptop) {
+      grid-area: 2 / 1 / 3 / 4;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      .study-material,
+      .total-students,
+      .comments {
+        flex-direction: column;
+      }
+
+    }
+
+    @media only screen and (max-width: variables.$tablet) {
+      grid-area: 2 / 1 / 3 / 4;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      .study-material,
+      .total-students,
+      .comments {
+        flex-direction: column;
+      }
+    }
+
+    .study-material,
+    .total-students,
+    .comments {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 25px;
+
+      @media only screen and (min-width: variables.$laptop) {
+        &.reverse {
+          flex-direction: row-reverse;
+          justify-content: flex-end;
+        }
+      }
+
+      .count {
+        font-family: gilroyBold;
+        font-weight: 600;
+        font-size: clamp(1.25rem, 1.184rem + 0.2817vw, 1.4375rem);
+        line-height: 1.3;
+      }
+
+      .material-title,
+      .total-students-title,
+      .comments-title {
+        color: $DARK;
+        line-height: 1.15;
+        font-size: clamp(0.9375rem, 0.8715rem + 0.2817vw, 1.125rem);
+      }
+    }
+  }
+
+  .enter-logout-btn-wrapper {
+    @media only screen and (max-width: variables.$laptop) and (min-width: variables.$tablet) {
+      grid-area: 1 / 3 / 2 / 4;
+      grid-template-columns: auto auto;
+      align-items: flex-start;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+
+    @media only screen and (max-width: variables.$tablet) {
+      grid-area: 3 / 1 / 4 / 4;
+      grid-template-columns: 1fr 1fr;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 10px;
+
+    .questionnaire-btn {
+      width: 100%;
+      padding: 15px 0px;
+      background: #051c78;
+      border-radius: 5px;
+      color: #fff;
+
+      @media screen and (max-width: variables.$laptop) and (min-width: variables.$tablet) {
+        padding: 12px 25px;
+        width: max-content;
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+
+      @media (hover: none) {
+        &:active {
+          opacity: 0.8;
+        }
+      }
+    }
+
+    .logout-btn {
+      background: #f3f3f3;
+      border-radius: 5px;
+      padding: 15px 0px;
+      font-weight: 500;
+      font-size: clamp(0.9375rem, 0.8935rem + 0.1878vw, 1.0625rem);
+      line-height: 1.2;
+      transition: .2s ease all;
+
+      @media screen and (max-width: variables.$laptop) and (min-width: variables.$tablet) {
+        padding: 12px 25px;
+        width: max-content;
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          background: #b2b2b2;
+        }
+      }
+
+      @media (hover: none) {
+        &:active {
+          background: #b2b2b2;
+        }
+      }
+
+    }
+  }
+}

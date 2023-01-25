@@ -1,0 +1,79 @@
+.my-teachers-cart {
+  margin-top: 15px;
+  padding: 25px;
+  border-radius: 10px;
+  background: #ffffff;
+
+  @media only screen and (max-width: 1439px) {
+    display: none;
+  }
+
+  .my-teachers-cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .my-teachers-cart-title {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+      color: rgba(0, 0, 0, 0.68);
+    }
+
+    .open-all-teachers-componenent-btn {
+      font-weight: 500;
+      font-size: 17px;
+      line-height: 20px;
+      color: #007aff;
+    }
+  }
+
+  .my-teachers-avatars-wrapper {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 79px);
+    gap: 10px;
+    justify-content: center;
+
+    .my-teachers-avatar-item {
+      width: 79px;
+      height: 79px;
+      position: relative;
+
+      .student-avatar-img {
+        width: 100%;
+        border-radius: 50%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .status-live {
+        position: absolute;
+        z-index: 1;
+        bottom: 0;
+        right: 0;
+        width: 15px;
+        height: 15px;
+        background-color: #4ade80;
+        box-shadow: 0px 0px 0px 2px #ffffff;
+        border-radius: 50%;
+      }
+    }
+  }
+  .no-teacher {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    img {
+      width: 50px;
+    }
+    h1 {
+      font-size: 18px;
+    }
+    h2 {
+      font-size: 17px;
+    }
+  }
+}

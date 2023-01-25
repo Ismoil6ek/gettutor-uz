@@ -1,0 +1,71 @@
+.dialog {
+
+  .reactEasyCrop_Container {
+    background-color: #EBEBEB;
+
+    .reactEasyCrop_CropArea, .reactEasyCrop_CropAreaGrid {
+      color: rgba(0, 0, 0, 0.0);;
+    }
+  }
+}
+.crop-btns {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: #fff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  
+    .crop-modal-btn {
+      display: block;
+      padding: 10px 15px;
+      background: linear-gradient(213.62deg, #0023B8 -13.84%, #566FD8 121.86%);
+      color: rgb(255, 255, 255);
+      font-size: 17px;
+      font-weight: 500;
+      line-height: 20px;
+      letter-spacing: 0em;
+      text-align: left;
+      border-radius: 10px;
+      transition: 0.3s;
+      text-decoration: none;
+      cursor: pointer;
+  
+      &:hover {
+        background: linear-gradient(213.62deg, #0023B8 -13.84%, #566FD8 121.86%);
+      }
+    }
+  
+    .crop-modal-btn2 {
+      display: block;
+      padding: 10px 15px;
+      border: 1px solid #0023B8;
+    //   color: white;
+      font-size: 17px;
+      font-weight: 500;
+      line-height: 20px;
+      letter-spacing: 0em;
+      text-align: left;
+      border-radius: 10px;
+      transition: 0.3s;
+      cursor: pointer;
+      &:hover {
+        background: linear-gradient(213.62deg, #0023B8 -13.84%, #566FD8 121.86%);
+        color: white;
+      }
+    }
+  }
+  
+  .css-1qzuh2m-MuiDialogActions-root {
+    padding: 0;
+    margin: 0 !important;
+    background: #323232;
+  }
+  
+  .crop-modal-title {
+    font-size: 20px;
+    margin: 0;
+  }
+  

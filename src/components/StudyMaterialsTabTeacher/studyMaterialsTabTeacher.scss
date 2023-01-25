@@ -1,0 +1,525 @@
+@use "../../variables"as variables;
+
+.study-materials {
+  .study-materials-content {
+    .study-materials-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .study-materials-title {
+        font-weight: 700;
+        font-family: gilroyBold;
+        font-size: 25px;
+        line-height: 30px;
+
+        @media only screen and (max-width: variables.$tablet) {
+          display: none;
+        }
+      }
+
+      .study-materials-buttons {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        height: 45px;
+
+        @media only screen and (max-width: variables.$tablet) {
+          flex-direction: row-reverse;
+          flex-flow: row wrap;
+        }
+
+        .sort-study-materials-btn {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 13px;
+          border: 1px solid #dfdfdf;
+          border-radius: 5px;
+          height: 100%;
+          padding: 0px 12px;
+        }
+
+        .add-study-materials {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 45px;
+          height: 100%;
+          background: #051c78;
+          border-radius: 5px;
+          cursor: pointer;
+
+          .add-study-materials-icon {
+            fill: #fff;
+
+            @media only screen and (max-width: variables.$tablet) {
+              fill: #051c78;
+            }
+          }
+
+          input {
+            display: none;
+          }
+
+          @media only screen and (max-width: variables.$tablet) {
+            width: max-content;
+            background: white;
+            padding: 0px 40px;
+            border: 1px solid #0023b8;
+            transition: .2s ease all;
+
+            &::after {
+              content: "Добавить";
+              color: #0023b8;
+              margin-left: 10px;
+            }
+          }
+
+          @media (hover: hover) {
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+
+          @media (hover: none) {
+            &:active {
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+    }
+
+    .study-materials-body {
+      margin-top: 25px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 240px);
+      gap: 10px;
+      transition: all 1s linear;
+
+      @media screen and (max-width: variables.$tablet) {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .study-material-item-wrapper {
+        .study-material-video {
+          overflow: hidden;
+          position: relative;
+          cursor: pointer;
+
+          @media screen and (max-width: variables.$tablet) {
+            width: 100%;
+          }
+
+          .remove-video {
+            width: 50px;
+            height: 25px;
+            border-radius: 0 0 0 5px;
+            background-color: rgb(255, 255, 255);
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 10;
+            text-align: center;
+            margin: auto 0;
+            align-items: center;
+            display: none;
+
+            .MuiSvgIcon-root {
+              fill: red;
+            }
+          }
+
+          .video-menu {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 10;
+
+            button {
+              svg {
+                fill: #000000bb;
+              }
+            }
+          }
+
+          .videos-mobile {
+            .video-mobile-item {
+              padding: 10px 15px;
+              background-color: #f6f6f6;
+              border-radius: 10px;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+
+              .video-icon-name-wrapper {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                .video-name {
+                  margin-top: 0px;
+                }
+              }
+
+              .delete-visibililty-icons-wrapper {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+              }
+            }
+          }
+
+          .files-mobile {
+            padding: 10px 15px;
+            background-color: #f6f6f6;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+
+            .file-mobile-item {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+
+              .video-name {
+                margin-top: 0px;
+              }
+            }
+
+            .delete-visibililty-icons-wrapper {
+              display: flex;
+              gap: 10px;
+            }
+          }
+
+          video {
+            transition: 0.2s ease all;
+            z-index: 7;
+            height: 240px;
+            object-fit: cover;
+            opacity: 1;
+            border-radius: 5px;
+          }
+
+          video::-webkit-media-controls-panel {
+            width: 100px;
+          }
+
+          .document-view {
+            transition: 0.2s ease all;
+            z-index: 7;
+            width: 240px;
+            height: 240px;
+            background: #d9d9d9;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:hover .receiver-image {
+              display: block;
+            }
+          }
+
+          .laptop-file-wrapper {
+            width: 240px;
+            height: 240px;
+
+            object {
+              width: 256px;
+              height: 100%;
+            }
+
+            &::-webkit-scrollbar {
+              display: none;
+            }
+          }
+
+          .preview-file {
+            width: 240px;
+            height: 240px;
+            cursor: pointer;
+          }
+
+          &:hover .remove-video {
+            display: block;
+          }
+        }
+
+        .video-name {
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 20px;
+          margin-top: 10px;
+        }
+      }
+    }
+
+    .show-more-less-btn-wrapper {
+      .show-more-study-materials-btn {
+        padding-top: 27px;
+        width: 100%;
+        padding-top: 30px;
+        margin: 26px auto;
+        margin-top: 26px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 11px;
+        border-top: 1px solid #dfdfdf;
+
+        .show-more-study-materials-btn-icon {
+          fill: #3d3d3d;
+        }
+      }
+    }
+  }
+
+  .empty-materials {
+    padding: clamp(1.875rem, 1.5449rem + 1.4085vw, 2.8125rem) 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    .empty-materials-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+
+      .empty-materials-title {
+        font-weight: 700;
+        font-size: clamp(1.25rem, 1.14rem + 0.4695vw, 1.5625rem);
+        line-height: 1.2;
+        font-family: gilroyBold;
+      }
+
+      .empty-materials-description {
+        font-weight: 500;
+        font-size: clamp(0.9375rem, 0.8935rem + 0.1878vw, 1.0625rem);
+        line-height: 1.2;
+        text-align: center;
+      }
+    }
+
+    .add-study-materials {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      height: 100%;
+      padding: clamp(0.875rem, 0.831rem + 0.1878vw, 1rem) clamp(1.875rem, 0.9947rem + 3.7559vw, 4.375rem);
+      background: #051c78;
+      border-radius: 5px;
+      cursor: pointer;
+      color: white;
+      font-weight: 500;
+      font-size: clamp(0.8125rem, 0.7685rem + 0.1878vw, 0.9375rem);
+      line-height: 18px;
+
+      .add-study-materials-icon {
+        fill: #fff;
+      }
+
+      input {
+        display: none;
+      }
+    }
+  }
+}
+
+// Popover
+.upload-popover {
+  div.MuiPaper-elevation8 {
+    width: 900px;
+
+    .upolad-popover-header {
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 1em;
+      border-bottom: 1px solid #e8e8e8;
+
+      .upload-popover-title {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 25px;
+        font-weight: gilroyBold;
+      }
+    }
+
+    .upload-popover-body {
+      padding: 20px;
+
+      .body-title {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 17px;
+        color: rgba(0, 0, 0, 0.68);
+      }
+
+      .upload-file {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 10px;
+        background: #fcfcfd;
+        border: 1px solid #dfdfdf;
+        border-radius: 12px;
+
+        .file-logo {
+          width: 45px;
+          height: 45px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          background: #ebeff7;
+        }
+
+        .file-data {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          flex: 1;
+
+          .name-upload-proccess {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .file-name {
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 16px;
+              color: #87898e;
+              width: 200px;
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+            }
+
+            .upload-proccess {
+              font-weight: 400;
+              font-size: 12px;
+              line-height: 16px;
+              color: #87898e;
+            }
+          }
+
+          .progress-file {
+            width: 100%;
+
+            progress {
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      .enter-file-name {
+        margin-top: 20px;
+        padding: 1rem;
+        border: 1px solid #dfdfdf;
+        border-radius: 10px;
+        width: 100%;
+        font-size: 1.2rem;
+      }
+
+      .form-control-label {
+        .radio {
+          .MuiSvgIcon-root {
+            fill: #0096b2;
+          }
+        }
+      }
+
+      .add-cancel-btn-wrapper {
+        margin-top: 3rem;
+
+        .add-certificate {
+          padding: 12px 1rem;
+          color: white;
+          background: #051c78;
+          border-radius: 5px;
+        }
+
+        .cancel-action {
+          padding: 10px 1rem;
+          border-radius: 5px;
+          border: 2px solid #051c78;
+          margin-left: 10px;
+        }
+      }
+
+      .upolad-popover-btn {
+        padding: 32px 0px;
+        border: 1px dashed #8c8c8c;
+        border-radius: 8px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5em;
+        cursor: pointer;
+
+        span {
+          text-align: center;
+        }
+
+        .upload-popover-footer {
+          padding: 20px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          .subscribe-tariff-btn {
+            padding: 1rem;
+            color: #fff;
+            background: linear-gradient(213.62deg,
+                #0023b8 -13.84%,
+                #566fd8 121.86%);
+            border-radius: 5px;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 18px;
+          }
+
+          .cancel-subscribtion-tariff-btn {
+            padding: 14px;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 18px;
+            border: 1px solid #007aff;
+            border-radius: 5px;
+          }
+        }
+
+        .image-uploader {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.MuiMenu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  .visibility {
+    display: flex;
+    align-items: center;
+  }
+}
